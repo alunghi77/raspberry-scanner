@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>Social Cricle App</title>
+
+		<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		
+		<!-- JS Libs -->
+		<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+		<script src="./js/libs/handlebars/handlebars-1.0.rc.1.js"></script>
+		<script src="./js/libs/scroller/CSSPlugin.min.js"></script>
+		<script src="./js/libs/scroller/jquery.mCustomScrollbar.js"></script>
+		<script src="./js/libs/scroller/jquery.mousewheel.js"></script>
+		<script src="./js/libs/scroller/TweenLite.min.js"></script>
+
+		<!-- Chat Client -->
+		<script src="./js/chat-app.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="chat-container">
+				<div class="status alert alert-error">
+					<h4></h4>
+				</div>
+				<div class="chat-scroller">
+					<!-- dynamically loaded -->
+					<div class="chat-items">
+						<div class="chat-image">
+							<img src="./img/icons/icons-chat-profile.png" />
+ 						</div>
+ 						<div class="content">
+ 							<div class="chat-user-from">
+ 								<h4>Alessio Lunghi</h4>
+ 								<small>3 mins ago</small>
+ 							</div>
+	 						<div class="chat-message">
+								<p>This is a message to you from me</p>
+	 						</div>
+	 					</div>
+					</div>
+
+					<div class="chat-items">
+						<div class="chat-image">
+							<img src="./img/icons/icons-chat-profile.png" />
+ 						</div>
+ 						<div class="content">
+ 							<div class="chat-user-from">
+ 								<h4>Alessio Lunghi</h4>
+ 								<small>3 mins ago</small>
+ 							</div>
+	 						<div class="chat-message">
+								<p>This is a message to you from me</p>
+	 						</div>
+	 					</div>
+					</div>
+
+					<div class="chat-items">
+						<div class="chat-image">
+							<img src="./img/icons/icons-chat-profile.png" />
+ 						</div>
+ 						<div class="content">
+ 							<div class="chat-user-from">
+ 								<h4>Alessio Lunghi</h4>
+ 								<small>3 mins ago</small>
+ 							</div>
+	 						<div class="chat-message">
+								<p>This is a message to you from me</p>
+	 						</div>
+	 					</div>
+					</div>
+				</div>
+				<div class="chat-create">
+					<div class="chat-profile">
+						<img src="./img/icons/icons-chat-profile.png" />
+					</div>
+					<input type="text" name="chat" id="form_chat" placeholder="Type a message..."  />
+				</div>
+			</div>
+		</div>
+
+	<!-- Chat item template -->
+	<script id="chatItem-tmpl" type="text/x-handlebars-template">
+		
+		<div class="chat-items">
+			<div class="chat-image {{msg.data.color}}">
+				<img src="./img/icons/icons-chat-profile.png" />
+				</div>
+				<div class="content">
+					<div class="chat-user-from">
+						<h4>{{msg.data.fullname}}</h4>
+						<small>{{msg.data.time_ago}}</small>
+					</div>
+					<div class="chat-message">
+						<p>{{msg.data.text}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</script>
+
+	</body>
+</html>
