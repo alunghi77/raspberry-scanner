@@ -1,5 +1,5 @@
 # Chat app
-
+# http://martinsikora.com/nodejs-and-websocket-simple-chat-tutorial
 # 
 # Create a chat item
 #
@@ -14,7 +14,7 @@ create_chat = (msg) ->
 	$(".chat-scroller").mCustomScrollbar("update")
 
 	$(".chat-scroller .mCSB_container").append(html)
-	
+
 	$(".chat-scroller").mCustomScrollbar("scrollTo","bottom",{scrollInertia:250,scrollEasing:"easeInOutQuad"})
 
 	false
