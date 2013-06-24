@@ -14,9 +14,9 @@ body { background-color: #eee; }
 
 /* UI - chat items */
 
-.chat-scroller .chat-items				{ width:100%; float:left; height:auto;border-bottom: 1px solid #ECF0F1;padding-bottom: 5px;margin-bottom: 10px;}
+.chat-scroller .chat-items				{ width:100%; float:left; height:auto;border-bottom: 1px solid #ECF0F1;}
 .chat-items .chat-image 				{ float: left;width: 30px;padding: 10px 5px;}
-.chat-items .content 					{ float:left;width:360px;padding: 10px 5px;}
+.chat-items .content 					{ float:left;width:360px;padding: 10px 5px 0px;}
 .chat-items .content .chat-user-from 	{ float:left;width:360px;}
 .chat-items .content .chat-message 		{ float:left;width:360px;}
 

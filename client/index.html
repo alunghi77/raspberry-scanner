@@ -45,15 +45,14 @@
 		
 		<div class="chat-items">
 			<div class="chat-image {{msg.data.color}}">
-				<img src="./img/icons/icons-chat-profile.png" />
+				<img src="./img/icons/icons-barcode-scanner.png" />
 				</div>
 				<div class="content">
 					<div class="chat-user-from">
-						<h4>{{msg.data.fullname}}</h4>
-						<small>{{msg.data.time_ago}}</small>
+						<h4>{{msg.data.fullname}} <small>{{msg.data.time_ago}}</small></h4>
 					</div>
 					<div class="chat-message">
-						<p>{{msg.data.text}}</p>
+						<p>Barcode: {{msg.data.text}}</p>
 					</div>
 				</div>
 			</div>

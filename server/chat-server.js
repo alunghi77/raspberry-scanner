@@ -29,12 +29,18 @@
     index = clients.push(connection) - 1;
     console.log(new Date() + ' Connection accepted.');
     connection.on("message", function(message) {
-      var client, currentMsg, messageSendObj, _i, _len, _results;
+      var client, currentMsg, d, formatDate, messageSendObj, _i, _len, _results;
       if (message.type === "utf8") {
+        formatDate = function(date) {
+          var normalisedDate;
+          normalisedDate = new Date(date - (date.getTimezoneOffset() * 60 * 1000));
+          return normalisedDate.toISOString();
+        };
+        d = new Date();
         currentMsg = {};
-        currentMsg["time_ago"] = (new Date()).getTime();
+        currentMsg["time_ago"] = formatDate(new Date());
         currentMsg["text"] = message.utf8Data;
-        currentMsg["fullname"] = "user";
+        currentMsg["fullname"] = "scanner";
         currentMsg["color"] = "color";
         messageSendObj = {};
         messageSendObj["type"] = "message";

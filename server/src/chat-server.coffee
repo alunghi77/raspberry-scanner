@@ -51,11 +51,26 @@ wsServer.on "request", (request) ->
 		# accept only text
 		if message.type is "utf8"
 
+			formatDate = (date) ->
+  				normalisedDate = new Date(date - (date.getTimezoneOffset() * 60 * 1000))
+  				normalisedDate.toISOString()
+
+			d = new Date()
+
+			# curr_secs	= d.getSeconds()
+			# curr_mins	= d.getMinutes()
+			# curr_hours 	= d.getHours()
+			# curr_date 	= d.getDate()
+			# curr_month 	= d.getMonth() + 1
+			# curr_year 	= d.getFullYear()
+
+			
+
 			# process WebSocket message
 			currentMsg = {}
-			currentMsg["time_ago"] 	= (new Date()).getTime()
+			currentMsg["time_ago"] 	= formatDate new Date() #curr_secs + "-" + curr_mins + "-" + curr_date + "-" + curr_month + "-" + curr_year 
 			currentMsg["text"] 		= message.utf8Data
-			currentMsg["fullname"] 	= "user"
+			currentMsg["fullname"] 	= "scanner"
 			currentMsg["color"] 	= "color"
 
 			messageSendObj = {}
