@@ -1,8 +1,9 @@
 # https://github.com/flatiron/prompt and https://github.com/qrpike/NodeJS-CLI-Listener
 
 WebSocket 	= require('ws')
-
 sys = require("sys")
+
+endpoint = 'ws://192.168.1.116:1337'
 
 st = process.openStdin()
 
@@ -12,7 +13,7 @@ st.addListener "data", (d) ->
 
 	WebSocket = require('ws');
 
-	ws = new WebSocket('ws://192.168.1.5:1337');
+	ws = new WebSocket(endpoint);
 	
 	ws.on 'open', () ->
 

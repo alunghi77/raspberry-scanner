@@ -119,7 +119,7 @@ chat = ()->
 
 			status.closest(".status").removeClass("alert-success").addClass("alert-error")
 			status.closest(".status").slideDown "fast"
-			status.html('<i class="icon-warning-sign"></i> Error - Unable to communicate with the chat server.')
+			status.html('<i class="icon-warning-sign"></i> Error - Unable to communicate with Barcode server.')
 			input.attr('disabled', 'disabled')
 
 	, 3000
