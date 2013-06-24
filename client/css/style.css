@@ -9,7 +9,7 @@ body { background-color: #eee; }
 .container 						{ position: relative; overflow: hidden; width:470px; top:100px;}
 .container .status 				{ display: none; border-radius: 0px}
 .container .status h4 i 		{ position: relative;top: 2px;padding-left: 5px}
-.chat-container 				{ width:100%;width: 470px;position: fixed;bottom: 0px;border: 0px solid #aaa;box-shadow: 1px 6px 34px #ccc; overflow: hidden;}
+.chat-container 				{ width:100%;width: 470px;/*position: fixed;*/bottom: 0px;border: 0px solid #aaa;box-shadow: 1px 6px 34px #ccc; overflow: hidden;}
 .chat-container .chat-scroller 	{ position: relative; overflow: auto; height: 300px;background-color: #fff; top: 0px;}
 
 /* UI - chat items */
