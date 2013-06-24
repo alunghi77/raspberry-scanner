@@ -1,4 +1,4 @@
-# chat server
+# ws-scanner server
 
 webSocketsServerPort = 1337
 acceptDomain = 'http://sandbox.dev:10088'
@@ -16,7 +16,7 @@ server = http.createServer (request, response) ->
 
 server.listen webSocketsServerPort, ()-> 
 
-	console.log new Date() + "[Welcome to Social Circle Chat] Server is listening on port " + webSocketsServerPort
+	console.log new Date() + "[Welcome to Raspberry Scanner] Server is listening on port " + webSocketsServerPort
 
 # create the server
 wsServer = new WebSocketServer({
@@ -30,11 +30,11 @@ wsServer.on "request", (request) ->
 
 	console.log new Date() + ' Connection from origin ' + request.origin + '.'
 
-	if request.origin isnt acceptDomain
+	# if request.origin isnt acceptDomain
 
-		console.log "Cannot connect from a different host"
+	# 	console.log "Cannot connect from a different host"
 
-		return false
+	# 	return false
 
 	connection = request.accept(null, request.origin)
 
