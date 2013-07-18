@@ -1,0 +1,71 @@
+Test Script:
+
+1. Display Wireless on LCD
+2. Pause
+3. Obtain IP via DHCP
+4. Ping Default Gateway
+5. Ping google.com
+6. Attempt reverse tunnel to Gamaroff Staging Server
+7. Send Test Payload for scanner with:
+	- Serial ID
+	- Temperature of CPU
+	- IP on LAN
+	- Barcode Test:  
+
+
+
+
+LCD Screen:
+
+1. 	
+	Obtain IP via DHCP
+	IP: 192.168.1.114
+	LCD.BACKLIGHT=GREEN
+
+	Obtain IP via DHCP
+	IP: NO IP ASSIGNED
+	LCD.BACKLIGHT=RED
+
+2. 
+	Ping Default Gateway
+	IP: 255.255.255.0
+	LCD.BACKLIGHT=GREEN	
+
+	Ping Default Gateway
+	IP: NO GATEWAY
+	LCD.BACKLIGHT=RED	
+
+3. 	
+	Ping google.com
+	Success
+	LCD.BACKLIGHT=GREEN
+
+	Ping google.com
+	Failed
+	LCD.BACKLIGHT=RED
+
+4. 
+	Connecting to 82.153.123.78
+	SSH: Connected
+	LCD.BACKLIGHT=GREEN
+
+	Connecting to 82.153.123.78
+	SSH: Could not connect
+	LCD.BACKLIGHT=RED
+
+5. 	
+	Sending payload
+	Status: Sending / Sent / Received / Success
+	LCD.BACKLIGHT=GREEN
+
+	Sending payload
+	Status: Failed
+		LCD.BACKLIGHT=RED
+
+
+
+- Serial ID
+- Temperature of CPU
+- IP on LAN
+- Barcode Test:  
+
